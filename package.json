@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Friend finding app",
+  "main": "server.js",
+  "scripts": {
+    "test": "N/A",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Munch-Z/friend-finder.git"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Munch-Z/friend-finder/issues"
+  },
+  "homepage": "https://github.com/Munch-Z/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
