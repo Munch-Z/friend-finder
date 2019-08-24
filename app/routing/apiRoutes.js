@@ -11,10 +11,10 @@ function findFriend(user) {
     
     for (let i = 0; i < friends.length; i++) {
         let newDifference = 0;
-        let scores = friends[i].scores;
+        const scores = friends[i].scores;
     
         for (let j = 0; j < scores.length; j++) {
-            newDifference += Math.abs(parseInt(user.scores[j]) - scores[j]);
+            newDifference += Math.abs(parseInt(user.scores[j]) - parseInt(scores[j]));
         }
     
     
@@ -35,14 +35,11 @@ router.route('/friends')
         res.json(friends);
     })
     .post((req, res) => {
-        console.log(req.body);
         const userData = req.body;
         
         const index = findFriend(userData);
 
         friends.push(userData);
-
-        console.log(friends[index]);
         res.json(friends[index]);
     })
 
