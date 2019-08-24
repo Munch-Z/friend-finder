@@ -37,7 +37,7 @@ function postSurvey() {
     })
     .then((res) => res.json())
     .then((data) => {
-        console.log(data);
+        updateModal(data);
     })
 
 }
@@ -62,4 +62,30 @@ function checkForm() {
 
 
     return isValid;
+}
+
+
+window.addEventListener('click', (e) => {
+    if (e.target.id === 'survey_modal') {
+        closeModal();
+    }
+})
+
+function updateModal(friend) {
+
+    const modal = document.getElementById('survey_modal');
+    const img = document.getElementById('modal-img');
+    const title = document.getElementById('modal-title');
+
+    title.textContent = `Meet your new friend! ${friend.name}`;
+    img.src = friend.photo;
+
+    modal.classList.remove('hide');
+
+}
+
+function closeModal() {
+    const modal = document.getElementById('survey_modal');
+
+    modal.classList.add('hide');
 }

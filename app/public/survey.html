@@ -11,16 +11,16 @@
 
 <body>
     <header>
-    <h1>Questions</h1>
-</header>
+        <h1>Questions</h1>
+    </header>
     <form>
-            <h2>About You</h2>
-    <div class="input-wrapper">
-        <label for="survey_name">Name (Required)</label>
-        <input type="text" id="survey_name">
-        <label for="survey_img">Link to image (Required)</label>
-        <input type="text" id="survey_img">
-    </div>
+        <h2>About You</h2>
+        <div class="input-wrapper">
+            <label for="survey_name">Name (Required)</label>
+            <input type="text" id="survey_name">
+            <label for="survey_img">Link to image (Required)</label>
+            <input type="text" id="survey_img">
+        </div>
         <div class="question-wrapper">
             <h3>How would you rate the following song: What do you mean - Justin Bieber?</h3>
             <div class="radio-wrapper">
@@ -134,7 +134,15 @@
         <input type="submit" id="survey_submit" value="Submit">
     </form>
 
-    <section id="survey_modal" class="hide modale"></section>
+
+
+    <section id="survey_modal" class="hide modal">
+        <div class="modal-content">
+            <h1 id="modal-title"></h1>
+            <img src="" alt="Your friend" id="modal-img">
+        </div>
+
+    </section>
 
     <script src="js/PostJS.js"></script>
 </body>
