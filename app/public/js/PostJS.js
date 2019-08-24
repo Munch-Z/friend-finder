@@ -77,7 +77,7 @@ function updateModal(friend) {
     const img = document.getElementById('modal-img');
     const title = document.getElementById('modal-title');
 
-    title.textContent = `Meet your new friend! ${friend.name}`;
+    title.textContent = `Meet your new friend!: ${friend.name}`;
     img.src = friend.photo;
 
     modal.classList.remove('hide');
