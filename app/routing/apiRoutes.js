@@ -14,7 +14,7 @@ function findFriend(user) {
         let scores = friends[i].scores;
     
         for (let j = 0; j < scores.length; j++) {
-            newDifference += Math.abs(user.scores[j] - scores[j]);
+            newDifference += Math.abs(parseInt(user.scores[j]) - scores[j]);
         }
     
     
@@ -35,11 +35,15 @@ router.route('/friends')
         res.json(friends);
     })
     .post((req, res) => {
-        const user = req.body;
+        console.log(req.body);
+        const userData = req.body;
+        
+        const index = findFriend(userData);
 
-        friends.push(user);
+        friends.push(userData);
 
-        res.json(friends[findFriend(user)]);
+        console.log(friends[index]);
+        res.json(friends[index]);
     })
 
 module.exports = router;
